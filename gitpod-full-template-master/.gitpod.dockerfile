@@ -12,10 +12,6 @@ RUN touch /etc/init.d/mongod
 RUN apt-get -y install mongodb-org mongodb-org-server -y
 RUN apt-get update -y
 RUN apt-get -y install links
-RUN sudo apt-get update \
-    && sudo apt-get install -y \
-        ... \
-    && rm -rf /var/lib/apt/lists/*
 
 USER gitpod
 # Local environment variables
@@ -27,4 +23,3 @@ ENV C9_HOSTNAME="localhost"
 
 USER root
 # Switch back to root to allow IDE to load
-RUN add-apt-repository ppa:git-core/ppa
