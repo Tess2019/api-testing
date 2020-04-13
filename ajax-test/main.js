@@ -1,3 +1,4 @@
+const baseURL = "https://ci-swapi.herokuapp.com/api/";
 var xhr = new XMLHttpRequest();
 
 xhr.open("GET", "https://ci-swapi.herokuapp.com/api/");
